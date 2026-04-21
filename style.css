@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #9b59b6; /* Warna ungu utama */
+    color: white;
+}
+
+/* Navbar */
+header {
+    background-color: white;
+    padding: 15px 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 5%;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-align: justify;
+    opacity: 0.9;
+}
+
+.btn-contact {
+    display: inline-block;
+    background-color: white;
+    color: #2980b9; /* Warna teks tombol biru sesuai desain */
+    padding: 12px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+/* Galeri Gambar */
+.hero-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* RESPONSIVE DESIGN (Media Queries) */
+
+/* Tablet (Layar di bawah 992px) */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content p {
+        text-align:justify;
+    }
+
+    .image-grid {
+        gap: 10px;
+    }
+}
+
+/* Handphone (Layar di bawah 600px) */
+@media (max-width: 600px) {
+    header {
+        padding: 10px 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section {
+        padding: 40px 5%;
+    }
+}
+
+.info-section {
+    /* Warna latar belakang krem pucat */
+    background-color: #e3e3e3; 
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.info-container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.info-item {
+    margin-bottom: 35px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.info-item p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Menyesuaikan ukuran font pada tablet dan HP */
+@media (max-width: 768px) {
+    .info-item h3 {
+        font-size: 1.2rem;
+    }
+    .info-item p {
+        font-size: 1.1rem;
+    }
+    .info-section {
+        padding: 60px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-item {
+        margin-bottom: 25px;
+    }
+    .info-item h3 {
+        font-size: 1.1rem;
+    }
+    .info-item p {
+        font-size: 1rem;
+    }
+}
+
+.experience-section {
+    background-color: #f0edee; /* Warna latar belakang krem sama dengan info-section */
+    background-size: 10% 100%;
+    padding: 60px 10%;
+    min-height: 100vh;
+}
+
+.container-exp {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Judul Kapsul */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    background-color: #f37032; /* Warna oranye sesuai desain */
+    color: white;
+    padding: 10px 40px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #c0392b; /* Aksen garis bawah di dalam tombol */
+}
+
+/* Item Pengalaman */
+.exp-item {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.exp-item h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.exp-item ul {
+    list-style: none; /* Kita hilangkan default bullet agar bisa dikustomisasi */
+    padding-left: 20px;
+}
+
+.exp-item li {
+    font-size: 1.1rem;
+    color: #444;
+    position: relative;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* Menambahkan custom dot/bullet */
+.exp-item li::before {
+    content: "•";
+    color: black;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .experience-section {
+        padding: 40px 5%;
+    }
+    
+    .exp-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .exp-item li {
+        font-size: 1rem;
+    }
+
+    .section-title span {
+        font-size: 1.2rem;
+        padding: 8px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .exp-item ul {
+        padding-left: 15px;
+    }
+}
+
+.education-section {
+    background-color: #f0edee; 
+    background-size: 10% 100%;
+    padding: 60px 10%;
+    text-align: left;
+}
+
+.container-edu {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Judul Kapsul & Garis Bawah */
+.section-title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.pill-title {
+    background-color: #f37032; /* Warna oranye sesuai desain */
+    color: white;
+    padding: 10px 40px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #c0392b; /* Aksen garis bawah di dalam tombol */
+}
+
+.title-line {
+    width: 200px; /* Lebar garis hitam */
+    height: 3px;
+    background-color: #333;
+    margin-top: -2px; /* Menempel sedikit di bawah kapsul */
+    z-index: 1;
+}
+
+/* Item Edukasi */
+.edu-item {
+    margin-bottom: 45px;
+}
+
+.edu-item h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.edu-item ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.edu-item li {
+    font-size: 1.15rem;
+    color: #333;
+    position: relative;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Custom Bullet Points */
+.edu-item li::before {
+    content: "•";
+    color: black;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .education-section {
+        padding: 40px 8%;
+    }
+
+    .pill-title {
+        font-size: 1.3rem;
+        padding: 8px 45px;
+    }
+
+    .edu-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .edu-item li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-section {
+        padding: 40px 5%;
+    }
+    
+    .title-line {
+        width: 150px;
+    }
+}
+
+/* Container Utama untuk Informasi Lainnya */
+.other-info-section {
+    background-color: #f0edee; 
+    background-size: 10% 100%;
+    padding: 80px 10%;
+    min-height: 100vh;
+}
+
+.container-skills {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Re-use gaya judul dari seksi sebelumnya */
+.section-title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.pill-title {
+    background-color: #f37032; /* Warna oranye sesuai desain */
+    color: white;
+    padding: 10px 40px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #c0392b; /* Aksen garis bawah di dalam tombol */
+}
+
+.title-line {
+    width: 220px;
+    height: 3px;
+    background-color: #333;
+    margin-top: -2px;
+    z-index: 1;
+}
+
+/* Gaya per item Skill */
+.skill-item {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.skill-item h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.skill-item p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .other-info-section {
+        padding: 60px 8%;
+    }
+    
+    .skill-item h3 {
+        font-size: 1.5rem;
+    }
+    
+    .skill-item p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .other-info-section {
+        padding: 40px 5%;
+    }
+
+    .pill-title {
+        font-size: 1.2rem;
+        padding: 10px 30px;
+    }
+
+    .title-line {
+        width: 160px;
+    }
+
+    .skill-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .skill-item p {
+        font-size: 1rem;
+        text-align: justify; /* Opsional untuk tampilan mobile yang lebih rapi */
+    }
+}
+
+.gallery-section {
+    background-color: #9b59b6; /* Ungu sesuai hero section */
+    padding: 80px 5%;
+    color: white;
+    text-align: center;
+}
+
+.container-gallery {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery-group {
+    margin-bottom: 80px;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.title-underline {
+    width: 150px;
+    height: 4px;
+    background-color: white;
+    margin: 0 auto 40px auto;
+    border-radius: 2px;
+}
+
+/* Grid Foto yang Responsif */
+/* Grid Foto yang Tetap 3 Kolom di Semua Perangkat */
+.photo-grid {
+    display: grid;
+    /* Memaksa tetap 3 kolom meskipun di layar sekecil apapun */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Jarak antar foto diperkecil untuk layar HP agar tidak sesak */
+    gap: 10px; 
+}
+
+.photo-grid img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Bagian Videografi */
+.video-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.video-link a {
+    color: #2ecc71; /* Warna hijau sesuai desain [Klik Disini] */
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.video-link a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet (Layar di bawah 992px) */
+@media (max-width: 992px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Kolom di Tablet */
+    }
+}
+
+/* Handphone (Layar di bawah 600px) */
+@media (max-width: 600px) {
+    .gallery-section {
+        /* Mengurangi padding samping agar area grid lebih luas di HP */
+        padding: 40px 10px; 
+    }
+
+    .photo-grid {
+        /* Memperkecil gap lebih jauh di HP agar foto tetap terlihat jelas */
+        gap: 5px; 
+    }
+
+    .gallery-title {
+        font-size: 1.2rem; /* Mengecilkan judul agar proporsional */
+    }
+}
+
+.footer-section {
+    background-color: #ffffff; /* Latar belakang putih */
+    padding: 30px 20px;
+    border-top: 1px solid #eeeeee; /* Garis tipis opsional untuk pemisah */
+    text-align: center;
+}
+
+.footer-container p {
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Menyesuaikan ukuran teks di HP agar tidak terlalu besar */
+@media (max-width: 600px) {
+    .footer-container p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .footer-section {
+        padding: 20px 10px;
+    }
+}
