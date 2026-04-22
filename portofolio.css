@@ -1,0 +1,131 @@
+/* Reset & General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #935eb0; /* Warna ungu sesuai desain */
+    color: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Nav */
+header {
+    background-color: white;
+    color: black;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+}
+
+/* Section Titles */
+h2 {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Grid System (Responsive) */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default 4 kolom untuk laptop */
+    gap: 15px;
+}
+
+.grid-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.grid-gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Videografi Link */
+.videografi {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.videografi a {
+    color: #00ff00; /* Hijau sesuai desain */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-section {
+    background-color: #ffffff; /* Latar belakang putih */
+    padding: 30px 20px;
+    border-top: 1px solid #eeeeee; /* Garis tipis opsional untuk pemisah */
+    text-align: center;
+}
+
+.footer-container p {
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Menyesuaikan ukuran teks di HP agar tidak terlalu besar */
+@media (max-width: 600px) {
+    .footer-container p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .footer-section {
+        padding: 20px 10px;
+    }
+}
